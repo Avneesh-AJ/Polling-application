@@ -1,9 +1,16 @@
 {% extends 'base.html' %}
+
 {% block content %}
 
     {% include 'main\components\navbar.html' %}
     <div class="container">
-            
+        <div class="container">
+            {% if user.is_authenticated %}
+                Hi {{ user.username }}  ! <i class="material-icons">verified_user</i>
+                <p>Select Your Question and vote on the giving choices</p>
+            {% else %}
+            {%endif %}
+        </div>
         <div class="row">
             <h1>Questionaire</h1>
         </div>
