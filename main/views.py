@@ -21,7 +21,7 @@ class Question(PermissionRequiredMixin,SingleObjectMixin,FormView):
     model=models.Question
     template_name='main\question.html'
     form_class=forms.AnswerForm
-    permission_required= "add_answer"
+    permission_required= 'main.add_answer'
 
     def get_context_data(self, **kwargs):
         #data={}
